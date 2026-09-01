@@ -83,3 +83,58 @@ No Rust a condição do if não precisa estar dentro do parenteses "()"
 If  x >= y {
 
 }
+
+Tem o "else" e o "else if", assim como a maioria das linguagens
+
+|| -> Or
+&& -> And
+
+No Rust, tudo pode ser uma expressão, ou seja, eu posso criar uma variavel que recebe como valor o resultado de um "if else". Lembrando que para um valor ser considerado o retorno de uma expressão, precisa remover o ";" do final da linha e só colocar (caso queira) no final do bloco todo
+
+Ex: let condicao = if idade > 18 {"maior"} else {"menor"};
+
+---
+
+Estruturas de repeticoes
+
+While:
+	Funciona do mesmo jeito que em outras linguagens, voce pode definir uma variavel que vai servir de contador e um limite para o loop. Também temos o "continue;" que serve para pular uma interação
+	Ex: 	
+		while contador < 10 {
+		contador += 1;
+		println!("{}", contador);
+	}
+
+Loop: 
+	Funciona como um "while true", colocando o bloco do código em um loop infinito propositalmente, e para sair do loop infinito, basta escrever um "break;". Também temos o "continue;" que serve para pular uma interação
+
+For:
+	Funciona da seguinte forma "for X in 1..11", sendo o "X" a variavel que vai usar, e o "in 1..11" sendo o intervalo que vai ter nesta repetição, aonde o 1 é o começo e o 11 é a "barreira", que quer dizer que a repetição para antes do final, neste caso sendo o 10.
+	Para que pare no número escolhido, pode escrever "1..=10" que agora vai até o final, que é 10
+
+---
+
+Match Statement:
+
+Match Statement (ou match expression), é parecido com um _switch case_ do C ou o _match case_ do python, porém com diferenças.
+
+Match Statement em Rust é **sempre** uma expressão e se não for definido nem tratado  um caso para o valor "Default", o compilador vai retornar um warning e nao vai compilar, para compilar precisaria adicionar o "unsafe{}", porém não é indicado. Para adicionar um valor para "Default" precisa adicionar o "\_" 
+```
+let <variavel_x> match <variavel_y> {
+<valor_variavel_y> => <valor_atribuido_variavel_x>,
+_ => <valor_padrao_variavel_x>
+}
+```
+
+Ex:
+```
+
+let linguagem = "";
+let proposito = match linguagem {
+"PHP" => "Web",
+_ => "Desconhecido"
+}
+```
+
+---
+
