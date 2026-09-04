@@ -106,3 +106,11 @@ Operadores matematicos:
 Ponto e virgula (;):
 
 No Rust, tudo pode ser uma expressão, porém quando você adiciona um ";" no final da linha, o Rust ignora o **resultado** dessa expressão, ou seja, se retornar algo o Rust vai ignorar esse retorno
+
+---
+
+Definir funcoes:
+
+Voce nao precisar definir tudo antes da funcao main(), nem declarar cabeçalhos 
+
+
